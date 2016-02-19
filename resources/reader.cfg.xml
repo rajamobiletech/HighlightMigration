@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/reader</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.default_schema">reader</property>
+		<property name="show_sql">false</property>
+
+		<mapping class="com.cisco.reader.models.Books"></mapping> 
+		<mapping class="com.cisco.reader.models.Bookmarks"></mapping> 
+	  <mapping class="com.cisco.reader.models.Highlights"></mapping> 
+    <mapping class="com.cisco.reader.models.Notes"></mapping> 
+	  <mapping class="com.cisco.reader.models.Pages"></mapping> 
+    <mapping class="com.cisco.reader.models.Users"></mapping> 
+	  		
+	</session-factory>
+</hibernate-configuration>

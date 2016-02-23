@@ -26,6 +26,18 @@ public class Predicate {
       }
       return result;
   }
+  
+  public static <T> T select(Iterable<T> target, IPredicate<T> predicate) {
+      T result = null;
+      for (T element : target) {
+          if (!predicate.apply(element))
+              continue;
+          result = element;
+          break;
+      }
+      return result;
+  }
+
 
   public static <T> T select(Collection<T> target, IPredicate<T> predicate, T defaultValue) {
       T result = defaultValue;
